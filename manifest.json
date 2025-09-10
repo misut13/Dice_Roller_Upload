@@ -1,11 +1,14 @@
 {
+  "id": "com.misut13.diceroller",
   "name": "P&P Dice Roller",
   "short_name": "DiceRoller",
-  "start_url": "./dice_roller_app.html",
+  "description": "Ein praktischer Würfelroller für Pen & Paper Spiele. Erstelle Profile, speichere Würfelfunktionen und würfle direkt im Browser.",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#667eea",
   "orientation": "portrait",
+  "categories": ["games", "utilities"],
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -15,6 +18,13 @@
     {
       "src": "icons/icon-512.png",
       "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/screenshot1.png",
+      "sizes": "1080x1920",
       "type": "image/png"
     }
   ]
