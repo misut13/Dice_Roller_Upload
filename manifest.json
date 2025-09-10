@@ -4,10 +4,12 @@
   "short_name": "DiceRoller",
   "description": "Ein praktischer Würfelroller für Pen & Paper Spiele. Erstelle Profile, speichere Würfelfunktionen und würfle direkt im Browser.",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#667eea",
   "orientation": "portrait",
+  "lang": "de-DE",
   "categories": ["games", "utilities"],
   "icons": [
     {
@@ -34,5 +36,24 @@
       "type": "image/png",
       "form_factor": "wide"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Neues Profil",
+      "short_name": "Profil",
+      "description": "Erstelle ein neues Spielerprofil",
+      "url": "./index.html#new-profile",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "share_target": {
+    "action": "./index.html?share-target",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
