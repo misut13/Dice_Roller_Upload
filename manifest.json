@@ -26,6 +26,11 @@
       "src": "icons/screenshot1.png",
       "sizes": "1080x1920",
       "type": "image/png"
+    },
+    {
+      "src": "icons/screenshot_wide1.png",
+      "sizes": "1280x720",
+      "type": "image/png"
     }
   ]
 }
