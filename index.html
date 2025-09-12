@@ -714,15 +714,17 @@
                             <div class="dice-function-formula">A: ${escapeHtml(func.attack)} | S: ${escapeHtml(func.damage)}</div>
                         `;
 
-                        card.addEventListener('click', () => {
+                        card.addEventListener('click', (e) => {
                             if (deleteMode) {
+                                e.stopPropagation();
+                                e.preventDefault();
                                 currentProfile.attackFunctions.splice(index, 1);
                                 deleteMode = false;
                                 saveProfiles();
                                 renderProfileDetail();
-                            } else {
-                                rollAttackFunction(index);
+                                return;
                             }
+                            rollAttackFunction(index);
                         });
 
                         attackFunctionsList.appendChild(card);
@@ -739,15 +741,17 @@
                             <div class="dice-function-formula">${escapeHtml(func.formula)}</div>
                         `;
 
-                        card.addEventListener('click', () => {
+                        card.addEventListener('click', (e) => {
                             if (deleteMode) {
+                                e.stopPropagation();
+                                e.preventDefault();
                                 currentProfile.diceFunctions.splice(index, 1);
                                 deleteMode = false;
                                 saveProfiles();
                                 renderProfileDetail();
-                            } else {
-                                rollDiceFunction(index);
+                                return;
                             }
+                            rollDiceFunction(index);
                         });
 
                         diceFunctionsList.appendChild(card);
@@ -766,15 +770,17 @@
                         <div class="dice-function-name">W${dice.sides}</div>
                     `;
 
-                    card.addEventListener('click', () => {
+                    card.addEventListener('click', (e) => {
                         if (deleteMode) {
+                            e.stopPropagation();
+                            e.preventDefault();
                             currentProfile.simpleDices.splice(index, 1);
                             deleteMode = false;
                             saveProfiles();
                             renderProfileDetail();
-                        } else {
-                            rollSimpleDice(index);
+                            return;
                         }
+                        rollSimpleDice(index);
                     });
 
                     simpleDicesList.appendChild(card);
